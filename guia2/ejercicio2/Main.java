@@ -76,7 +76,7 @@ public class Main {
 			}if(figura instanceof Tetraedro) {
 				System.out.print("area de tetraedro: ");
 			}
-            System.out.println("Area: " + figura.getArea() + " Volumen: " + figura.getVolumen());
+            System.out.println("Volumen: " + figura.getVolumen());
         }
 		
 	}
