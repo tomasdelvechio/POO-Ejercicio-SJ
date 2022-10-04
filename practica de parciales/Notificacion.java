@@ -1,5 +1,0 @@
-package ar.edu.unlu.parcialGTA;
-
-public enum Notificacion {
-COMPRASATISFECHA,NOEXISTEELAUTO,DINERONODISPONIBLE,NOHAYESPACIO,GUARDADO,ERROR
-}
