@@ -1,0 +1,54 @@
+Grand Theft Auto
+Bienvenidos a Vice City. Bienvenidos a los '80. Luego de un largo tiempo en una cárcel de máxima seguridad,
+Tommy Vercetti está de nuevo en las calles de Vice City.
+Durante un trabajo para su jefe, Sonny Forelli, Tommy cae en una emboscada y pierde todo su dinero y
+mercancía. En total, una suma de 23.021.980 dólares, monto que Sonny quiere de regreso y obligará a Tommy
+a conseguirlo, sea como sea. Tommy Vercetti se encuentra solo y sin dinero en una gran ciudad, con mafiosos,
+gansters y policías corruptos que quieren su cabeza, su única opción es hacer lo que él mejor hace, adueñarse
+de la ciudad. Tommy comenzará a cobrar dinero, lo que aumentará su tesoro personal. Tommy puede utilizar
+este dinero para realizar diferentes operaciones.
+Desde el punto de vista de los negocios, en la ciudad de Vice City (V.C.) dos elementos son importantes: los
+autos y los inmuebles. De ambos hay para todos los gustos. En V.C. hay muchos autos y Tommy puede
+adquirir cualquiera. Para lograr esto utiliza a su viejo amigo Carl Johnson. Carl es un dealer, un proveedor de
+autos. Cuando Tommy quiere un auto se lo solicita a él, ya sea un auto cualquiera o con una capacidad
+11076 - Programación OO
+Departamento de Ciencias Básicas
+Universidad Nacional de Luján
+específica.
+Tommy no es exigente y la marca del auto y color pueden ser cualquiera. Ante el pedido, Carl recorre los
+autos de la ciudad buscando uno que se adapte a la especificación de Tommy.
+Si el pedido fue por un auto cualquiera, sin indicar ninguna característica especial, en cuanto Carl encuentra
+uno, le consulta a Tommy si puede pagar el costo de dicho auto. Si el pedido fue con requerimientos, Carl le
+cobra a Tommy $200 más. Tommy verifica simplemente si tiene el dinero suficiente para pagarlo, de ser así le
+responde afirmativamente, Carl cobra ese dinero y le entrega el auto. Si Tommy no cuenta con el dinero
+suficiente, Carl continúa buscando por todos los autos. Antes de solicitar un auto, Tommy debe asegurarse de
+contar con lugar disponible en alguno de sus inmuebles. Cuando el pedido es por un auto con requerimientos
+(color especial o cantidad de asientos específico o marca), Carl lo busca, y si no lo encuentra avisa que ese
+auto no exite. Solo Carl puede recorrer los autos de V.C. en busca del indicado y la única forma en que
+Tommy puede obtener un auto es a través de Carl.
+En V.C. la oferta inmobiliaria es muy grande. La ciudad mantiene un registro de todos sus inmuebles, ya sea
+que se hallen en venta o no. Para comprar un inmueble, Tommy debe hallar uno que se encuentre en venta y
+su precio no supere el dinero en efectivo con el que Tommy cuenta. Al comprar un inmueble el capital de
+Tommy aumenta el equivalente a un 95% del valor del inmueble. Esto es, si el inmueble vale $100 y Tommy
+lo adquiere, pierde $100 de su dinero en efectivo, pero en el fondo ganará $95 en el cálculo del total de su
+capital, pues posee ahora ese inmueble. Algunos inmuebles permiten guardar autos pero tienen una
+capacidad máxima. No todos los inmuebles tienen la misma capacidad por lo que antes de guardar un auto
+en alguno de ellos, Tommy debe asegurarse que haya lugar disponible.
+Cuando un auto es guardado, se considera que el auto es también parte del capital de Tommy. El valor capital
+de un auto es el 80% de su precio.
+Gran parte de los robos de autos en V.C. son denunciados a la policía. Si Tommy posee un auto en uno de sus
+garajes que fue denunciado por robo, el valor capital del mismo resulta ser sólo del 10% de su valor original.
+Por suerte, Tommy logró conseguir un handy policial de uno de los autos de Vice City y puede saber si un auto
+ha sido denunciado o no. Para esto sólo debe indicar por handy el número de patente y se le informará si el
+auto ha sido denunciado como robado o no. Tommy sólo puede tener acceso a sus autos a través de los
+inmuebles en donde se encuentran.
+Se pide: Modele el juego Vice City con las características antes mencionadas. Considere implementar una
+clase Ciudad que de alguna forma mantenga todos los inmuebles de la ciudad (en venta o no), todos los
+vehículos que circulan y lo que usted considere necesario de acuerdo al enunciado. Debe existir una
+operación (ubicada en la clase correcta) que permita conocer cuál es el capital total de Tommy Vercetti al
+momento; esto es, la suma del efectivo que tenga más la del capital. Para que se comprenda este concepto,
+se denomina Capital a la suma de los valores de las propiedades (muebles o inmuebles).
+Recuerde que el valor capital de un auto puede variar de acuerdo al estado del mismo por lo que al momento
+de realizar el cálculo se deben considerar todas las posibles situaciones. Asuma que cuenta con la clase
+Handy que contiene una operación estaRobado( Patente:String) : booleano que retorna verdadero si el auto
+cuya patente es Patente ha sido declarado como robado, se retorna falso en caso contrario.
