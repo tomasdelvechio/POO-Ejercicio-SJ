@@ -56,7 +56,7 @@ public class TommyVercetti extends Ciudadano {
 	
 	@Override
 	protected double calcularCapital() {
-		double capital = 0;
+		double capital = this.getEfectivo();
 		LinkedList<Auto> autos;
 		for(Propiedad propiedad : this.getPropiedades()) {
 			capital += propiedad.getPrecio()*0.95;
