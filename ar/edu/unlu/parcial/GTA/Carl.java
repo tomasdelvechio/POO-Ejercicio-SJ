@@ -23,11 +23,8 @@ public class Carl extends Ciudadano {
 		this.getPropiedades().remove(auto);
 	}
 	
-	@Override
-	protected void agregarPropiedad(Propiedad propiedad) {
-		if(propiedad instanceof Auto) {
-			propiedades.add(propiedad);			
-		}
+	protected void agregarPropiedad(Auto propiedad) {
+		super.agregarPropiedad(propiedad);
 	}
 	
 	public Propiedad buscarAuto(int asientos, String color, String marca) {
