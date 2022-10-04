@@ -13,7 +13,10 @@ public class Ciudad {
         // ---------------------------------------------------------------
 
         Handy handyPolicial = new Handy();
-        TommyVercetti tommy = new TommyVercetti(handyPolicial);
+        
+        TommyVercetti tommy = new TommyVercetti();
+        tommy.setHandy(handyPolicial);
+
         Carl carl = new Carl();
         carl.agregarPropiedad(auto1);
         carl.agregarPropiedad(auto2);

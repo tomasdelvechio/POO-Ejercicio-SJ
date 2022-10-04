@@ -4,10 +4,9 @@ import java.util.LinkedList;
 
 public class TommyVercetti extends Ciudadano {
 	
-	private Handy handyPolicial = new Handy();
+	private Handy handyPolicial ;
 
-	public TommyVercetti(Handy handy) {
-		super();
+	public void setHandy(Handy handy) {
 		this.handyPolicial = handy;
 	}
 
