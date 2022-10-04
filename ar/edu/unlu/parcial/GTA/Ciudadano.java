@@ -4,11 +4,12 @@ import java.util.LinkedList;
 
 public abstract class Ciudadano {
 	
-	private double efectivo;
+	private double efectivo = 0;
 	LinkedList<Propiedad> propiedades = new LinkedList<Propiedad>();
-	
-	public Ciudadano() {
-		this.efectivo = 0;
+	Ciudad ciudad;
+
+	public Ciudadano(Ciudad ciudad) {
+		this.ciudad = ciudad ;
 	}
 
 	protected double pagar(double monto){

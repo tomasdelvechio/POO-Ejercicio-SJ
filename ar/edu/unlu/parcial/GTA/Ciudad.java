@@ -1,23 +1,33 @@
 package ar.edu.unlu.parcial.GTA;
 
+import java.util.ArrayList;
+
 public class Ciudad {
 
-    public static void main(String[] args) {
+    public ArrayList<Propiedad> propiedades = new ArrayList<>();
+
+    public void main(String[] args) {
         // instancio las propiedades
         Propiedad auto1 = new Auto(100, "marca1", "rojo", 4, "1");
+        propiedades.add(auto1);
         Propiedad auto2 = new Auto(100, "marca2", "blanco", 3, "2");
+        propiedades.add(auto2);
         Propiedad auto3 = new Auto(100, "marca3", "azul", 2, "3");
+        propiedades.add(auto3);
         Propiedad auto4 = new Auto(100, "marca4", "negro", 1, "4");
+        propiedades.add(auto4);
         Propiedad casa1 = new Inmueble(100, 1);
+        propiedades.add(casa1);
         Propiedad casa2 = new Inmueble(200, 2);
+        propiedades.add(casa2);
         // ---------------------------------------------------------------
 
         Handy handyPolicial = new Handy();
         
-        TommyVercetti tommy = new TommyVercetti();
+        TommyVercetti tommy = new TommyVercetti(this);
         tommy.setHandy(handyPolicial);
 
-        Carl carl = new Carl();
+        Carl carl = new Carl(this);
         carl.agregarPropiedad(auto1);
         carl.agregarPropiedad(auto2);
         carl.agregarPropiedad(auto3);

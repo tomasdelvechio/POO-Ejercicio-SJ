@@ -2,6 +2,10 @@ package ar.edu.unlu.parcial.GTA;
 
 public class Carl extends Ciudadano {
 
+	public Carl(Ciudad ciudad) {
+		super(ciudad);
+	}
+
 	@Override
 	protected double calcularCapital() {
 		double capital = 0;
