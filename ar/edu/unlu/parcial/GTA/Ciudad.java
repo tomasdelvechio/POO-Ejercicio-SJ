@@ -34,8 +34,11 @@ public class Ciudad {
         carl.agregarPropiedad(auto4);
 
         // no hay espacio (no tiene casa)
-        System.out.println(tommy.solicitarAuto(carl));
+        System.out.println(carl.buscarAuto(tommy));
         System.out.println(tommy.getEfectivo());
+
+        // REFACTOR HASTA ACA
+        // DOY VUELTA LAS RESPONSABILIDADES
 
         // no hay dinero (no tiene efectivo)
         System.out.println(tommy.comprarInmueble(casa1));

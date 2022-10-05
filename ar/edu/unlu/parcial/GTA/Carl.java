@@ -18,7 +18,34 @@ public class Carl extends Ciudadano {
 	public Propiedad buscarAuto() {
 		return this.getPropiedades().get((int)(Math.random()*this.getPropiedades().size()));
 	}
+
+	public Notificacion buscarAuto(Ciudadano unCiudadano) throws Exception {
+		if (! unCiudadano.existeEspacio()) {
+			return Notificacion.NOHAYESPACIO;
+		}
+		try {
+			Auto auto = this.autoDisponible(unCiudadano);
+			if (unCiudadano.puedeComprar(auto, 0)) {
+				unCiudadano.vender(auto, 0);
+				return Notificacion.COMPRASATISFECHA;
+			}
+		} catch (Exception e) {
+			return Notificacion.NOEXISTEELAUTO;
+		}
+		
+		return Notificacion.DINERONODISPONIBLE;
+	}
 	
+	public Auto autoDisponible(Ciudadano ciudadanoSolicitante) throws Exception {
+		// No le robemos el auto al que nos pide el auto!!!
+		for ( Propiedad propiedad : this.ciudad.propiedades ) {
+			if (propiedad instanceof Auto && !ciudadanoSolicitante.esTuya(propiedad)) {
+				return (Auto) propiedad;
+			}
+		}
+		throw new Exception("Auto No Disponible");
+	}
+
 	public void cobrarDinero(double monto, Auto auto) {
 		this.getPropiedades().remove(auto);
 	}
